@@ -1,5 +1,8 @@
-#include <Intern.hpp>
+#include "Intern.hpp"
 #include <string>
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 Intern::Intern(void)
 {
@@ -27,14 +30,11 @@ AForm* Intern::makeForm(std::string formName, std::string target)
 	switch(i)
 	{
 		case 0:
-			//
-			break;
+			return(new PresidentialPardonForm(target));
 		case 1:
-			//
-			break;
+			return(new RobotomyRequestForm(target));
 		case 2:
-			//
-			break;
+			return(new ShrubberyCreationForm(target));
 		default:
 			throw FormNameDoesNotExist();
 	}
@@ -42,7 +42,7 @@ AForm* Intern::makeForm(std::string formName, std::string target)
 
 const char* Intern::FormNameDoesNotExist:: what() const throw()
 {
-	return("FormNameDoesNotExist");
+	return("Form type name does not exist");
 }
 
 Intern::~Intern(void)

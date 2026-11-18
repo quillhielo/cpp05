@@ -39,7 +39,7 @@ class AForm
             public:
                 const char* what() const throw();
         };
-        ~AForm();
+        virtual ~AForm();
 };
 
 std::ostream& operator<<(std::ostream& os, const AForm& other);
