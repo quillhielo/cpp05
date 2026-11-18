@@ -27,15 +27,15 @@ void ShrubberyCreationForm::action() const
 {
     std::ofstream file((_target + "_shrubbery").c_str());
     if (file)
-    {
-		file << "    /\\           \n";
-		file << "   /  \\          \n";
-		file << "  /    \\         \n";
-		file << " /      \\  /\\   \n";
-		file << "/________\\/  \\  \n";
-		file << "    ||    /____\\ \n";
-		file << "    ||      ||    \n";
-		file << "    ||      ||    \n";
+    { 
+		file << "    /\\             \n";
+		file << "   /  \\            \n";
+		file << "  /    \\           \n";
+		file << " /      \\    /\\   \n";
+		file << "/________\\  /  \\  \n";
+		file << "    ||     /____\\ \n";
+		file << "    ||       ||    \n";
+		file << "    ||       ||    \n";
     }
     else
         throw OpenFileException();
